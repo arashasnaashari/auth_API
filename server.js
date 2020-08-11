@@ -21,11 +21,12 @@ app.use(express.json())
 
 //Import Routes
 const authRoute = require('./routes/auth')
+const postRoute = require('./routes/posts')
 
 
 //Route middleware
 app.use('/api/user',authRoute)
-
+app.use('/api/posts',postRoute)
 
 
 app.listen(3000,console.log('Server start'))
